@@ -32,11 +32,11 @@ jobs:
             python setup.py sdist bdist_wheel
             twine check --strict dist/*
 
-        - name: Publish distribution to PyPI
-          uses: pypa/gh-action-pypi-publish@release/v1
-          with:
-            password: ${{ secrets.PYPI_API_TOKEN }} # This token should be created in Settings > Secrets > Actions
-            # repository_url: https://test.pypi.org/legacy/ # Use this for testing to upload the distribution to test.pypi
+        # - name: Publish distribution to PyPI
+        #   uses: pypa/gh-action-pypi-publish@release/v1
+        #   with:
+        #     password: ${{ secrets.PYPI_API_TOKEN }} # This token should be created in Settings > Secrets > Actions
+        #     # repository_url: https://test.pypi.org/legacy/ # Use this for testing to upload the distribution to test.pypi
 
         - name: Create/Update GitHub Release
           id: create_update_release
